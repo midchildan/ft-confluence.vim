@@ -95,8 +95,8 @@ syn match confluenceList "^\s*-\ze\%(\s\|$\)"
 
 syn match confluenceRule "^\s*----\s*$"
 
-syn match confluenceLinebreak "\%(^\|\s\)\zs\\\\"
-syn match confluenceLinebreak "\\\\\ze\%(\s\|$\)"
+syn match confluenceLinebreak "\%(^\|\s\)\zs\\\\\\\@!"
+syn match confluenceLinebreak "\%(^\|[^\\]\)\zs\\\\\ze\%(\s\|$\)"
 
 syn region confluenceCitation start="??" end="??" contains=@confluenceDoc keepend oneline
 syn region confluenceSuperscript start="\%(^\|\A\&\D\)\zs\^" end="\^\ze\%(\A\&\D\|$\)" contains=@confluenceDoc keepend oneline
